@@ -9,6 +9,7 @@ jobs:
     name: Build on Magisk
     runs-on: ubuntu-latest
 
+
     steps:
       - name: Check out patches
         uses: actions/checkout@v2
