@@ -7,7 +7,7 @@ index ae18065..fff8a79 100644
          if (!hasFlags(FLAG_NON_ROOT_SHELL) && hasFlags(FLAG_MOUNT_MASTER)) {
              try {
 -                shell = build("su", "--mount-master");
-+                shell = build("suu", "--mount-master");
++                shell = build("02su", "--mount-master");
                  if (!shell.isRoot())
                      shell = null;
              } catch (NoShellException ignore) {}
@@ -16,7 +16,7 @@ index ae18065..fff8a79 100644
          if (shell == null && !hasFlags(FLAG_NON_ROOT_SHELL)) {
              try {
 -                shell = build("su");
-+                shell = build("suu");
++                shell = build("02su");
                  if (!shell.isRoot()) {
                      shell = null;
                  }
@@ -29,7 +29,7 @@ index 1e3575f..7a5a0fb 100644
              // noinspection ConstantConditions
              for (String path : System.getenv("PATH").split(":")) {
 -                File su = new File(path, "su");
-+                File su = new File(path, "suu");
++                File su = new File(path, "02su");
                  if (su.canExecute()) {
                      // We don't actually know whether the app has been granted root access.
                      // Do NOT set the value as a confirmed state.
