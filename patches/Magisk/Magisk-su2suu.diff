@@ -20,7 +20,7 @@ index 8d0d81446..41b8e8b01 100644
  using main_fun = int (*)(int, char *[]);
  
 -constexpr const char *applets[] = { "su", "resetprop", "zygisk", nullptr };
-+constexpr const char *applets[] = { "suu", "resetprop", "zygisk", nullptr };
++constexpr const char *applets[] = { "02su", "resetprop", "zygisk", nullptr };
  static main_fun applet_mains[] = { su_client_main, resetprop_main, zygisk_main, nullptr };
  
  static int call_applet(int argc, char *argv[]) {
@@ -33,7 +33,7 @@ index 466e5f439..4ff87265a 100644
  #define SELINUXMOCK INTLROOT "/selinux"
  
 -constexpr const char *applet_names[] = { "su", "resetprop", nullptr };
-+constexpr const char *applet_names[] = { "suu", "resetprop", nullptr };
++constexpr const char *applet_names[] = { "02su", "resetprop", nullptr };
  
  #define POST_FS_DATA_WAIT_TIME       40
  #define POST_FS_DATA_SCRIPT_MAX_TIME 35
